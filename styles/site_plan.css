@@ -6,24 +6,40 @@
     --header-font: 'Protest Riot', sans-serif;
 }
 
-#color div:nth-child(1){
+#color div:nth-child(2){
     background-color: var(--background-color); 
 }
-#color div:nth-child(2){
+#color div:nth-child(3){
     background-color: var(--primary-color); 
 }
-#color div:nth-child(3){
+#color div:nth-child(4){
     background-color: var(--secondary-color); 
+    color: white;
 }
 
-#font div:nth-child(1){
+#font div:nth-child(2){
     font-family: var(--header-font); 
 }
-#font div:nth-child(2){
+#font div:nth-child(3){
     font-family: var(--paragraph-font); 
 }
 
 div {
     margin: 1rem;
     padding: 1rem;
+}
+
+#list {
+    background-color: var(--primary-color);
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1rem;
+    font-family: var(--paragraph-font);
+}
+
+#list img {
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px gray;
 }
