@@ -1,0 +1,29 @@
+:root {
+    --background-color : #F0E7DE;
+    --primary-color : #d58936;
+    --secondary-color: #694a38;
+    --paragraph-font: 'Josefin Sans', sans-serif;
+    --header-font: 'Protest Riot', sans-serif;
+}
+
+#color div:nth-child(1){
+    background-color: var(--background-color); 
+}
+#color div:nth-child(2){
+    background-color: var(--primary-color); 
+}
+#color div:nth-child(3){
+    background-color: var(--secondary-color); 
+}
+
+#font div:nth-child(1){
+    font-family: var(--header-font); 
+}
+#font div:nth-child(2){
+    font-family: var(--paragraph-font); 
+}
+
+div {
+    margin: 1rem;
+    padding: 1rem;
+}
