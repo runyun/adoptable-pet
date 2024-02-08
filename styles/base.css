@@ -1,0 +1,16 @@
+:root {
+    --background-color : #F0E7DE;
+    --primary-color : #d58936;
+    --secondary-color: #694a38;
+    --paragraph-font: 'Josefin Sans', sans-serif;
+    --header-font: 'Protest Riot', sans-serif;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    background-color: var(--background-color);
+}
+
+h1, h2 {
+    font-family: var(--header-font);
+}
