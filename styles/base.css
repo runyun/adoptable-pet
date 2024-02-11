@@ -9,8 +9,41 @@
 body {
     font-family: var(--paragraph-font);
     background-color: var(--background-color);
+    margin: 0 auto;
+    max-width: 1800px;
 }
 
 h1, h2 {
     font-family: var(--header-font);
+    font-weight: lighter;
 }
+
+header, footer{
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+
+main {
+    height: 100vh;
+}
+
+section {
+    margin: 1rem;
+    position: relative;
+    background-color: #694a38;
+    width: 300px;
+    height: 500px;
+    padding: 1rem;
+    color: white;
+}
+
+#gender {
+    position: absolute;
+    top: -85px;
+    left: -10px;
+    font-size: 4rem;
+    background-color: #694a38;
+    border-radius: 100%;
+    padding-top: 15px;
+}
+
