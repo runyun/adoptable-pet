@@ -24,17 +24,6 @@ initHeartStatus(pet_id);
 
 function convertPetData(pet) {
 
-    // switch(pet.animal_sex) {
-    //     case 'M':
-    //         pet.animal_sex = 'Male';
-    //         break;
-    //     case 'F':
-    //         pet.animal_sex = 'Female';
-    //         break;
-    //     default:
-    //         pet.animal_sex = 'No record';
-    // }
-
     if (pet.age == ''){
         pet.age = '??';
     }
@@ -96,7 +85,7 @@ function renderSection(pet) {
 
         <fieldset>
             <legend>Shelter</legend>
-            <p>Name: <a href="https://www.google.com/search?q=${pet.shelter_name}"><span>${pet.shelter_name} 🔗</span></a></p>
+            <p>Name: <a href="https://www.google.com/search?q=${pet.shelter_name}" target="_blank"><span>${pet.shelter_name} 🔗</span></a></p>
             <p>Address: ${pet.shelter_address}</p>
             <p>Tel: ${pet.shelter_tel}</p>
         </fieldset>
