@@ -55,10 +55,10 @@ export function renderSection(pets, selector) {
         const imageAlt = getImageAlt(pet);
 
         switch(pet.animal_sex) {
-            case 'F':
+            case 'Female':
                 pet.animal_sex = '♀';
                 break;
-            case 'M':
+            case 'Male':
                 pet.animal_sex = '♂';
                 break;
             default:
