@@ -1,0 +1,43 @@
+@media screen and (min-width: 800px) {
+    
+    #pet_list {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 400px));
+        gap: 2rem;
+    }
+    
+    #pet_list section {
+        margin: 4rem;
+    }
+
+    main>button {
+        width: 20%;
+    } 
+
+    #pet_detail img {
+        width: 30%;
+    }
+
+    .heart {
+        margin: 5rem auto 0;
+        right: 15vw;
+    }
+
+    form {
+        width: 20rem;
+        right: 40vw;
+        top: 100px;
+    }
+
+    form label {
+        margin: 0.5rem;
+        padding-top: 2rem;
+    }
+
+    form button {
+        margin: 0 2rem;
+    }
+    
+    form div:last-child {
+        padding-top: 1rem;
+    }
+}

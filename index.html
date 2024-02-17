@@ -3,47 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Protest+Riot&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/medium.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="icon" href="paw_orange_icon.ico">
-
-    <meta property="og:title" content="">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="">
-    <meta property="og:url" content="">
-
-    <meta name="author" content="Yun Liu">
-    <meta name="description" content="">
+    <meta name="description" content="Help pets find homes and assist people in finding their perfect pet to reduce the difficulty of pet adoption.">
 
     <title>Adoptable Pet</title>
 </head>
 <body>
-    <header id="main-header">
-        <h1>Adoptable Pet 🐾</h1>
+    <header>
     </header>
     <main>
-        <div>
-            <section>
-                <img src="https://placekitten.com/g/200/300">
-                <p id="gender">♂︎</p>
-                <!-- <p id="gender">♀</p> -->
-                <p>age</p>
-                <p>kind</p>
-                <p>body type</p>
-                <p>color</p>
-                <p>place</p>
-            </section>
-        </div>
+        <button id="open_search">Search</button>
+        <div id="pet_list"></div>
+        <button id="load_more_button">See More</button>
+
+        <div id="overlay"></div>
+
+        <form name="search_box">
+            <label>Search 🐾</label>
+            <hr>
+            <label for="animal_kind">Kind</label>
+            <select name="animal_kind" id="animal_kind">
+                <option value="">All</option>
+                <option value="貓">Cat</option>
+                <option value="狗">Dog</option>
+            </select>
+    
+            <label for="animal_sex">Gender</label>
+            <select name="animal_sex" id="animal_sex">
+                <option value="">All</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+            
+            <label for="animal_age">Age</label>
+            <select name="animal_age" id="animal_age">
+                <option value="">All</option>
+                <option value="child">Child</option>
+                <option value="adult">Adult</option>
+            </select>
+
+            <label for="animal_bodytype">Body Type</label>
+            <select name="animal_bodytype" id="animal_bodytype">
+                <option value="">All</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="big">Big</option>
+            </select>
+
+            <label for="animal_colour">Color</label>
+            <select name="animal_colour" id="animal_colour">
+                <option value="">All</option>
+                <option value="白">White</option>
+                <option value="黑">Black</option>
+                <option value="黃">Yellow</option>
+            </select>
+
+            <div>
+                <button id="search_pet" type="button">Search Pets</button>
+                <button type="button">Cancel</button>
+            </div>
+        </form>
+
     </main>
-    <footer id="main-footer">
-        &copy; Yun Liu
-    </footer> 
+    <footer></footer> 
+    <script type="module" src="scripts/main.js"></script>
 </body>
 </html> 

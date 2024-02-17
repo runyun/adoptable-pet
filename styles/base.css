@@ -11,7 +11,9 @@ body {
     background-color: var(--background-color);
     margin: 0 auto;
     max-width: 1800px;
+    height: 100%;
 }
+
 
 h1, h2 {
     font-family: var(--header-font);
@@ -23,27 +25,258 @@ header, footer{
     padding: 1rem;
 }
 
-main {
-    height: 100vh;
+footer {
+    text-align: center;
+    margin-top: 4rem;
 }
 
-section {
-    margin: 1rem;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    border-radius: 2rem;
+    background-color: var(--primary-color);
+    border: 1px dashed var(--secondary-color);
+    padding: 0.8rem 1rem 0.3rem;
+    font-size: large;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main>button {
+    margin: 1rem auto;
+    width: 50%;
+    height: 70px;
+} 
+#test {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+#pet_list {
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(300px, 400px));
+    justify-content: center;
+    place-items: center;
+}
+
+#pet_list section {
+    margin: 4rem 0 0;
+    padding-top: 4rem;
     position: relative;
-    background-color: #694a38;
+    background-color: var(--primary-color);
     width: 300px;
     height: 500px;
-    padding: 1rem;
-    color: white;
+    color: black;
+    text-align: center;
+    border-radius: 5px;
 }
 
-#gender {
+.pet_image {
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+}
+
+section img {
+    border-radius: 2rem;
+    box-shadow: 0px 0px 10px var(--secondary-color);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section p {
+    padding-left: 2rem;
+    text-align: left;
+}
+
+#pet_detail section {
+    text-align: center;
+}
+
+#pet_detail img {
+    width: 80%;
+}
+.gender {
     position: absolute;
     top: -85px;
     left: -10px;
     font-size: 4rem;
-    background-color: #694a38;
+    background-color: var(--primary-color);
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+}
+
+.age {
+    position: absolute;
+    top: -85px;
+    right: -10px;
+    font-size: 4rem;
+    background-color: var(--primary-color);
     border-radius: 100%;
     padding-top: 15px;
 }
 
+form {
+    border: 1px var(--secondary-color) dashed;
+    width: 15rem;
+    padding: 1rem 2rem 2rem;
+    border-radius: 1rem;
+    position: absolute;
+    margin: 0 auto;
+    background-color: var(--background-color);
+
+    position: relative;
+    z-index: 100;
+
+    display: none;
+    position: fixed;
+    right: 10vw;
+    top: 80px;
+}
+
+form label:first-child {
+    color: black;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+form hr {
+    border: 1px dashed var(--primary-color);
+}
+
+form div:last-child {
+    padding-top: 3rem;
+}
+
+form button {
+    margin: 0 1rem;
+    padding: 0.5rem;
+}
+
+form.show {
+    display: block;
+}
+
+form label{
+    display: block; 
+    padding-top: 1rem;
+    font-size: large;
+}
+
+form select {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    display: block;
+    width: 80%;
+}
+
+div:has(button #search_pet) {
+    display: flex;
+}
+
+#search_pet+button {
+    background-color: initial;
+}
+
+legend {
+    margin: 0 2rem;
+    padding: 1rem 1rem 0.5rem;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 0.5rem;
+    text-align: left;
+}
+
+fieldset {
+    margin: 2rem;
+    background-color: var(--primary-color);
+    border: 1px dashed var(--secondary-color);
+    border-radius: 0.5rem;
+}
+
+fieldset a{
+    color: black;
+}
+
+fieldset a:hover{
+    color: darkblue;
+}
+
+.heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    color: white;
+    font-size: 4rem;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    margin: 1rem auto 0;
+    right: 30vw;
+    position: relative;
+}
+
+.heart:hover {
+    color: pink;
+    animation: heartBeat 1s infinite;
+    cursor: pointer;
+}
+
+.heart.active {
+    color: red;
+}
+
+.heart.active:hover {
+    animation: none;
+}
+
+@keyframes heartBeat {
+    10% {
+        font-size: 5rem;
+	}
+	20% {
+        font-size: 4rem;
+	}
+	30% {
+        font-size: 5rem;
+	}
+	40% {
+        font-size: 4rem;
+	}
+}
+
+#go_favorite_page {
+    background-color: var(--background-color);
+    font-size: larger;
+    cursor: pointer;
+}
+
+#overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(105, 74, 56, 0.5);
+    z-index: 99;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
