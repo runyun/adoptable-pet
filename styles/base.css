@@ -61,10 +61,7 @@ main>button {
     width: 50%;
     height: 70px;
 } 
-#test {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-}
+
 #pet_list {
     display: grid;
     grid-template-columns:repeat(auto-fill, minmax(300px, 400px));
