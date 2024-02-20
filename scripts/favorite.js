@@ -6,7 +6,7 @@ async function getFavoriteList() {
 
     let pet_id_list = getLocalStorage('pets');
     if(pet_id_list == null) {
-        pet_id_list = []
+        document.querySelector('.empty_message').style.display = 'block';
         return
     }
 

@@ -287,3 +287,7 @@ fieldset a:hover{
 #instruction li {
     margin-top: 1rem;
 }
+
+.empty_message {
+    display: none;
+}
