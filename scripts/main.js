@@ -1,6 +1,8 @@
-import { fetchAPIData, getAdoptablePetURL, renderSection, loadCommonHTMLelement} from "./share.mjs";
+import { fetchAPIData, getAdoptablePetURL, renderSection, loadCommonHTMLelement, getLocalStorage, setLocalStorage} from "./share.mjs";
 
 loadCommonHTMLelement();
+
+showInstruction();
 
 showLimitPet();
 
@@ -90,3 +92,47 @@ document.querySelector('#load_more_button').addEventListener('click', ()=>{
     renderSection(getRandomPets(searchResult), '#pet_list');
 });
    
+
+function showInstruction() {
+    const visites_name = 'visites';
+    const last_time_name = 'last_time';
+
+    let visits = getLocalStorage(visites_name);
+    let last_time = getLocalStorage(last_time_name);
+
+    visits ??= 0;
+    let expired = true;
+
+    if (last_time != null){
+        expired = checkExpired(last_time);
+    }
+
+    if (visits == 0 || expired){
+        document.querySelector('#instruction').style.display = 'block';
+    }else {
+        document.querySelector('#instruction').style.display = 'none';
+    }
+
+    visits += 1;
+    last_time = Date();
+
+    setLocalStorage(visites_name, visits);
+    setLocalStorage(last_time_name, last_time);
+}
+
+function checkExpired(last_time) {
+
+    let expired = true;
+
+    const thirty_days = (1000 * 3600 * 24) * 30;
+
+    const converted_time = Date.parse(last_time);
+    const today = new Date().getTime();
+    const timeDiff = today - converted_time;
+
+    if (timeDiff < thirty_days) {
+        expired = false;
+    }
+
+    return expired;
+}

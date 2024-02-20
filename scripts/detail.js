@@ -1,4 +1,4 @@
-import { getImageAlt, getPetByID, getPetsLocalStorage, setPetsLocalStorage, loadCommonHTMLelement, getPetsByIDlist } from "./share.mjs";
+import { getImageAlt, getPetByID, getLocalStorage, setLocalStorage, loadCommonHTMLelement} from "./share.mjs";
 
 loadCommonHTMLelement();
 
@@ -110,7 +110,7 @@ function updateHeartStatus(isFavorite) {
 
 function updateFavorite(pet_id) {
 
-    let pets = getPetsLocalStorage();
+    let pets = getLocalStorage('pets');
     
     if(pets == null){
         pets = [];
@@ -127,11 +127,11 @@ function updateFavorite(pet_id) {
         updateHeartStatus(true);
     }
 
-    setPetsLocalStorage(pets);
+    setLocalStorage('pets', pets);
 }
 
 function initHeartStatus(pet_id){
-    const pets = getPetsLocalStorage();
+    const pets = getLocalStorage('pets');
     if (pets.indexOf(pet_id) != -1){
         document.querySelector('.heart').classList.add('active');
     }

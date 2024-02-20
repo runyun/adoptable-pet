@@ -277,3 +277,13 @@ fieldset a:hover{
     bottom: 0;
     display: none;
 }
+
+#instruction {
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+#instruction li {
+    margin-top: 1rem;
+}

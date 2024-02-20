@@ -86,12 +86,12 @@ export function renderSection(pets, selector) {
     })
 }
 
-export function getPetsLocalStorage() {
-    return JSON.parse(localStorage.getItem('pets'));
+export function getLocalStorage(item_name) {
+    return JSON.parse(localStorage.getItem(item_name));
 }
 
-export function setPetsLocalStorage(pets) {
-    localStorage.setItem('pets', JSON.stringify(pets));
+export function setLocalStorage(item_name, value) {
+    localStorage.setItem(item_name, JSON.stringify(value));
 }
 
 export async function loadCommonHTMLelement(){

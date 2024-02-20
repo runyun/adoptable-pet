@@ -1,10 +1,10 @@
-import {getPetsLocalStorage, renderSection, getPetsByIDlist, loadCommonHTMLelement } from "./share.mjs";
+import {getLocalStorage, renderSection, getPetsByIDlist, loadCommonHTMLelement } from "./share.mjs";
 
 loadCommonHTMLelement();
 
 async function getFavoriteList() {
 
-    let pet_id_list = getPetsLocalStorage();
+    let pet_id_list = getLocalStorage('pets');
     if(pet_id_list == null) {
         pet_id_list = []
         return
